@@ -17,7 +17,7 @@ if "answers" not in st.session_state:
 
 def _run_test(content: str, test: str) -> bool:
     try:
-        exec(f"{content}\n{test}")
+        exec(f"{content}\n{test}", {})
         return True
     except:
         return False
